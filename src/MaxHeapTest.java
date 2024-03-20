@@ -12,7 +12,7 @@ import java.util.ArrayList;
 /**
  * JUnit tests for MaxHeap
  */
-public class MaxHeapStudentTest {
+public class MaxHeapTest {
 
     private static final int TIMEOUT = 200;
     private MaxHeap<Integer> heap;
