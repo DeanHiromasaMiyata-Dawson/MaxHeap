@@ -57,6 +57,7 @@ public class MaxHeap<T extends Comparable<? super T>> {
 
     /**
      * Helper method to perform downHeap
+     *
      * @param index index we want to downHeap
      */
     private void downHeap(int index) {
@@ -94,9 +95,6 @@ public class MaxHeap<T extends Comparable<? super T>> {
         }
     }
 
-
-
-
     /**
      * Adds the data to the heap.
      *
@@ -126,6 +124,7 @@ public class MaxHeap<T extends Comparable<? super T>> {
 
     /**
      * Helper method to perform upHeap
+     *
      * @param index index we want to upHeap
      */
     private void upHeap(int index) {
@@ -146,7 +145,7 @@ public class MaxHeap<T extends Comparable<? super T>> {
     /**
      * Removes and returns the root of the heap.
      *
-     * Do not shrink the backing array.
+     * Does not shrink the backing array.
      *
      * Replace any unused spots in the array with null.
      *
@@ -202,22 +201,14 @@ public class MaxHeap<T extends Comparable<? super T>> {
     /**
      * Returns the backing array of the heap.
      *
-     * For grading purposes only. You shouldn't need to use this method since
-     * you have direct access to the variable.
-     *
      * @return the backing array of the list
      */
     public T[] getBackingArray() {
-        // DO NOT MODIFY THIS METHOD!
         return backingArray;
     }
 
     /**
      * Returns the size of the heap.
-     *
-     * For grading purposes only. You shouldn't need to use this method since
-     * you have direct access to the variable.
-     *
      * @return the size of the list
      */
     public int size() {
