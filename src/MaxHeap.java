@@ -209,10 +209,10 @@ public class MaxHeap<T extends Comparable<? super T>> {
 
     /**
      * Returns the size of the heap.
+     *
      * @return the size of the list
      */
     public int size() {
-        // DO NOT MODIFY THIS METHOD!
         return size;
     }
 }
