@@ -2,37 +2,20 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 /**
- * Your implementation of a MaxHeap.
- *
- * @author Dean Miyata-Dawson
- * @version 1.0
- * @userid ddawson42
- * @GTID 903833148
- *
- * Collaborators: LIST ALL COLLABORATORS YOU WORKED WITH HERE
- *
- * Resources: LIST ALL NON-COURSE RESOURCES YOU CONSULTED HERE
+ * Implementation of a MaxHeap.
  */
 public class MaxHeap<T extends Comparable<? super T>> {
 
     /*
      * The initial capacity of the MaxHeap when created with the default
      * constructor.
-     *
-     * DO NOT MODIFY THIS VARIABLE!
      */
     public static final int INITIAL_CAPACITY = 13;
-
-    /*
-     * Do not add new instance variables or modify existing ones.
-     */
     private T[] backingArray;
     private int size;
 
     /**
      * Constructs a new MaxHeap.
-     *
-     * The backing array should have an initial capacity of INITIAL_CAPACITY.
      */
     public MaxHeap() {
         backingArray = (T[]) new Comparable[INITIAL_CAPACITY];
@@ -41,17 +24,7 @@ public class MaxHeap<T extends Comparable<? super T>> {
 
     /**
      * Creates a properly ordered heap from a set of initial values.
-     *
-     * You must use the BuildHeap algorithm that was taught in lecture! Simply
-     * adding the data one by one using the add method will not get any credit.
-     * As a reminder, this is the algorithm that involves building the heap
-     * from the bottom up by repeated use of downHeap operations.
-     *
-     * Before doing the algorithm, first copy over the data from the
-     * ArrayList to the backingArray (leaving index 0 of the backingArray
-     * empty). The data in the backingArray should be in the same order as it
-     * appears in the passed in ArrayList before you start the BuildHeap
-     * algorithm.
+     * Using BuildHeap Algorithm
      *
      * The backingArray should have capacity 2n + 1 (including the empty 0
      * index) where n is the number of data in the passed in ArrayList (not
@@ -59,11 +32,8 @@ public class MaxHeap<T extends Comparable<? super T>> {
      * contain the data in proper order, and the rest of the indices should
      * be empty.
      *
-     * Consider how to most efficiently determine if the list contains null data.
-     *
      * @param data a list of data to initialize the heap with
-     * @throws java.lang.IllegalArgumentException if data or any element in data
-     *                                            is null
+     * @throws java.lang.IllegalArgumentException if data or any element in data is null
      */
     public MaxHeap(ArrayList<T> data) {
         if (data == null || data.contains(null)) {
